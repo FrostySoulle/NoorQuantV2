@@ -93,13 +93,9 @@ h1{
 
 .top-grid{
     display:grid;
-    align-items:start;
+    align-items: start;
     grid-template-columns:2fr 1fr;
     gap:20px;
-}
-
-.top-grid > .card:first-child{
-  align-self: start;
 }
 
 .card{
@@ -113,7 +109,7 @@ h1{
 .status-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-	  gap:8px;
+	  margin-bottom:8px;
 }
 
 .metric{
@@ -121,7 +117,7 @@ h1{
 }
 
 .metric-value{
-    font-size:32px;
+    font-size:36px;
     font-weight:700;
 }
 
@@ -132,7 +128,7 @@ h1{
 .research-phase{
     margin-top:12px;
     background:#065f46;
-    padding:10px;
+    padding:12px;
     border-radius:8px;
     text-align:center;
     font-weight:700;
@@ -195,4 +191,65 @@ h1{
 .decision-title{
     font-weight:700;
     margin-bottom:10px;
+}
+
+.status-badge{
+background:#92400e;
+color:#fbbf24;
+padding:4px 10px;
+border-radius:999px;
+font-size:12px;
+font-weight:600;
+margin-right:12px;
+}
+
+.accordion-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.arrow{
+display:inline-block;
+transition:0.25s ease;
+}
+
+.accordion.active .arrow{
+transform:rotate(90deg);
+}
+
+.pipeline{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.pipeline-step{
+    background:#111827;
+    padding:12px 18px;
+    border-radius:8px;
+    border:1px solid #374151;
+}
+
+.active-step{
+    background:#065f46;
+    border-color:#10b981;
+}
+
+.pipeline-arrow{
+    color:#6b7280;
+    font-size:18px;
+}
+
+.blocker-list{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.blocker-item{
+    background:#111827;
+    padding:14px;
+    border-radius:8px;
 }

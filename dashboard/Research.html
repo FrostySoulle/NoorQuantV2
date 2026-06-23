@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoorQuant V2 - Research</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            NoorQuant
+        </div>
+
+        <ul>
+
+            <li><a href="Dashboard.html">Dashboard</a></li>
+            
+            <li><a href="Hypotheses.html">Hypotheses</a></li>
+
+            <li class="active-menu">Research</li>
+
+            <li><a href="hu.html">Halal Universe</a></li>
+
+            <li><a href="Signals.html">Signals</a></li>
+
+            <li><a href="trades.html">Trades</a></li>
+
+            <li><a href="Analytics.html">Analytics</a></li>
+
+            <li><a href="Journal.html">Journal</a></li>
+
+            <li><a href="Settings.html">Settings</a></li>
+
+        </ul>
+
+    </aside>
+
+    <main class="main-content">
+
+        <h1>Research</h1>
+
+        <!-- STATUS -->
+
+        <section class="card compact">
+
+            <h2>Research Status</h2>
+
+            <div class="status-grid">
+
+                <div class="metric">
+                    <div class="metric-value">7</div>
+                    <div class="metric-label">Hypotheses</div>
+                </div>
+
+                <div class="metric">
+                    <div class="metric-value">9</div>
+                    <div class="metric-label">Questions</div>
+                </div>
+
+                <div class="metric">
+                    <div class="metric-value">0</div>
+                    <div class="metric-label">Completed</div>
+                </div>
+
+                <div class="metric">
+                    <div class="metric-value">0</div>
+                    <div class="metric-label">Validated</div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PIPELINE -->
+
+        <section class="card">
+
+            <h2>Research Pipeline</h2>
+
+            <div class="pipeline">
+
+                <div class="pipeline-step active-step">
+                    Universe Audit
+                </div>
+
+                <div class="pipeline-arrow">→</div>
+
+                <div class="pipeline-step">
+                    Factor Research
+                </div>
+
+                <div class="pipeline-arrow">→</div>
+
+                <div class="pipeline-step">
+                    Signal Research
+                </div>
+
+                <div class="pipeline-arrow">→</div>
+
+                <div class="pipeline-step">
+                    Exit Research
+                </div>
+
+                <div class="pipeline-arrow">→</div>
+
+                <div class="pipeline-step">
+                    Cost Validation
+                </div>
+
+                <div class="pipeline-arrow">→</div>
+
+                <div class="pipeline-step">
+                    Production Candidate
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- QUESTIONS -->
+
+        <section class="card">
+
+            <h2>Research Queue</h2>
+
+            <div id="questions-container"></div>
+
+        </section>
+
+        <!-- RESULTS -->
+
+        <section class="card">
+
+            <h2>Research Results</h2>
+
+            <div id="results-container">
+
+                <div class="empty-state">
+                    No completed research yet.
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- BLOCKERS -->
+
+        <section class="card">
+
+            <h2>Current Blockers</h2>
+
+            <div class="blocker-list">
+
+                <div class="blocker-item">
+                    □ Historical halal universe data
+                </div>
+
+                <div class="blocker-item">
+                    □ Point-in-time halal classification
+                </div>
+
+                <div class="blocker-item">
+                    □ Delisted stock handling
+                </div>
+
+                <div class="blocker-item">
+                    □ Slippage assumptions
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- DECISION LOG -->
+
+        <section class="card">
+
+            <h2>Decision Log</h2>
+
+            <div id="decision-container"></div>
+
+        </section>
+
+    </main>
+
+    <script src="/assets/js/app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoorQuant V2 - Hypotheses</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            NoorQuant
+        </div>
+
+        <ul>
+
+             <li><a href="dashboard.html">Dashboard</a></li>
+            
+            <li class="active-menu">Hypotheses</li>
+            
+            <li><a href="Research.html">Research</a></li>
+
+            <li><a href="hu.html">Halal Universe</a></li>
+
+            <li><a href="Signals.html">Signals</a></li>
+
+            <li><a href="trades.html">Trades</a></li>
+
+            <li><a href="Analytics.html">Analytics</a></li>
+
+            <li><a href="Journal.html">Journal</a></li>
+
+            <li><a href="Settings.html">Settings</a></li>
+
+        </ul>
+
+    </aside>
+
+    <main class="main-content">
+
+    <h1>Hypotheses</h1>
+
+    <section class="card">
+
+        <h2>Research Foundation</h2>
+
+        <p style="margin-top:10px;color:#9ca3af;">
+            Every strategy rule must originate from a validated hypothesis.
+        </p>
+
+    </section>
+
+    <section id="hypotheses-container">
+
+        <div class="accordion">
+
+            <button class="accordion-header">
+
+                <span>H0 - Universe Validity</span>
+
+                <div>
+                    <span class="status-badge">NOT STARTED</span>
+                    <span class="arrow">▶</span>
+                </div>
+
+            </button>
+
+            <div class="accordion-content">
+
+                <p>
+                    The current halal universe contains sufficient liquidity and opportunity
+                    to support a long-only intraday strategy.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="accordion">
+
+            <button class="accordion-header">
+
+                <span>H1 - Relative Strength</span>
+
+                <div>
+                    <span class="status-badge">NOT STARTED</span>
+                    <span class="arrow">▶</span>
+                </div>
+
+            </button>
+
+            <div class="accordion-content">
+
+                <p>
+                    Stocks demonstrating stronger Relative Strength outperform weaker stocks
+                    over future periods.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="accordion">
+
+            <button class="accordion-header">
+
+                <span>H2 - Market Regime</span>
+
+                <div>
+                    <span class="status-badge">NOT STARTED</span>
+                    <span class="arrow">▶</span>
+                </div>
+
+            </button>
+
+            <div class="accordion-content">
+
+                <p>
+                    Trading performance differs across market regimes.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="accordion">
+
+            <button class="accordion-header">
+
+                <span>H3 - Breakout Continuation</span>
+
+                <div>
+                    <span class="status-badge">NOT STARTED</span>
+                    <span class="arrow">▶</span>
+                </div>
+
+            </button>
+
+            <div class="accordion-content">
+
+                <p>
+                    Opening Range Breakouts continue in the breakout direction often enough
+                    to create positive expectancy.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="accordion">
+
+            <button class="accordion-header">
+
+                <span>H4 - Volume Expansion</span>
+
+                <div>
+                    <span class="status-badge">NOT STARTED</span>
+                    <span class="arrow">▶</span>
+                </div>
+
+            </button>
+
+            <div class="accordion-content">
+
+                <p>
+                    Elevated volume improves continuation probability.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="accordion">
+
+            <button class="accordion-header">
+
+                <span>H5 - Absolute Strength</span>
+
+                <div>
+                    <span class="status-badge">NOT STARTED</span>
+                    <span class="arrow">▶</span>
+                </div>
+
+            </button>
+
+            <div class="accordion-content">
+
+                <p>
+                    Price above Open and VWAP improves stock selection quality.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="accordion">
+
+            <button class="accordion-header">
+
+                <span>H6 - Candidate Selection</span>
+
+                <div>
+                    <span class="status-badge">NOT STARTED</span>
+                    <span class="arrow">▶</span>
+                </div>
+
+            </button>
+
+            <div class="accordion-content">
+
+                <p>
+                    A smaller ranked candidate pool outperforms monitoring the entire universe.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script>
+
+    document.querySelectorAll(".accordion-header").forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const accordion = button.parentElement;
+
+            accordion.classList.toggle("active");
+
+        });
+
+    });
+
+</script>
+
+</body></html>
