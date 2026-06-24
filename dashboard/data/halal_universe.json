@@ -1,0 +1,212 @@
+[
+  {
+    "symbol": "ASIANPAINT",
+    "name": "Asian Paints Limited",
+    "is_halal": true,
+    "source": "Nifty50.csv",
+    "active": true
+  },
+  {
+    "symbol": "BRITANNIA",
+    "name": "Britannia Industries Limited",
+    "is_halal": true,
+    "source": "Nifty50.csv",
+    "active": true
+  },
+  {
+    "symbol": "CIPLA",
+    "name": "Cipla Limited",
+    "is_halal": true,
+    "source": "Nifty50.csv",
+    "active": true
+  },
+  {
+    "symbol": "COALINDIA",
+    "name": "Coal India Limited",
+    "is_halal": true,
+    "source": "Nifty50.csv",
+    "active": true
+  },
+  {
+    "symbol": "DRREDDY",
+    "name": "Dr Reddys Laboratories Ltd",
+    "is_halal": true,
+    "source": "Nifty50.csv",
+    "active": true
+  },
+  {
+    "symbol": "HINDUNILVR",
+    "name": "Hindustan Unilever Limited",
+    "is_halal": true,
+    "source": "Nifty50.csv",
+    "active": true
+  },
+  {
+    "symbol": "SUNPHARMA",
+    "name": "Sun Pharmaceutical Industries Limited",
+    "is_halal": true,
+    "source": "Nifty50.csv",
+    "active": true
+  },
+  {
+    "symbol": "TATACONSUM",
+    "name": "Tata Consumer Products Limited",
+    "is_halal": true,
+    "source": "Nifty50.csv",
+    "active": true
+  },
+  {
+    "symbol": "DIVISLAB",
+    "name": "Divi's Laboratories Limited",
+    "is_halal": true,
+    "source": "Nifty100.csv",
+    "active": true
+  },
+  {
+    "symbol": "DMART",
+    "name": "Avenue Supermarts Limited",
+    "is_halal": true,
+    "source": "Nifty100.csv",
+    "active": true
+  },
+  {
+    "symbol": "GAIL",
+    "name": "GAIL (India) Limited",
+    "is_halal": true,
+    "source": "Nifty100.csv",
+    "active": true
+  },
+  {
+    "symbol": "LODHA",
+    "name": "Lodha Developers Ltd",
+    "is_halal": true,
+    "source": "Nifty100.csv",
+    "active": true
+  },
+  {
+    "symbol": "PIDILITIND",
+    "name": "Pidilite Industries Limited",
+    "is_halal": true,
+    "source": "Nifty100.csv",
+    "active": true
+  },
+  {
+    "symbol": "ZYDUSLIFE",
+    "name": "Zydus Lifesciences Limited",
+    "is_halal": true,
+    "source": "Nifty100.csv",
+    "active": true
+  },
+  {
+    "symbol": "ACC",
+    "name": "ACC Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true
+  },
+  {
+    "symbol": "ALKEM",
+    "name": "Alkem Laboratories Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true
+  },
+  {
+    "symbol": "APLAPOLLO",
+    "name": "APL Apollo Tubes Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true
+  },
+  {
+    "symbol": "ASTRAL",
+    "name": "Astral Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true
+  },
+  {
+    "symbol": "AUROPHARMA",
+    "name": "Aurobindo Pharma Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true
+  },
+  {
+    "symbol": "CGPOWER",
+    "name": "CG Power and Industrial Solutions Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true
+  },
+  {
+    "symbol": "CONCOR",
+    "name": "Container Corporation of India Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true
+  },
+  {
+    "symbol": "CUMMINSIND",
+    "name": "Cummins India Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true
+  },
+  {
+    "symbol": "KPITTECH",
+    "name": "KPIT Technologies Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true
+  },
+  {
+    "symbol": "MARICO",
+    "name": "Marico Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true
+  },
+  {
+    "symbol": "MRF",
+    "name": "MRF Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true
+  },
+  {
+    "symbol": "PIIND",
+    "name": "PI Industries Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true
+  },
+  {
+    "symbol": "POLYCAB",
+    "name": "Polycab India Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true
+  },
+  {
+    "symbol": "SUPREMEIND",
+    "name": "The Supreme Industries Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true
+  },
+  {
+    "symbol": "SUZLON",
+    "name": "Suzlon Energy Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true
+  },
+  {
+    "symbol": "VOLTAS",
+    "name": "Voltas Ltd",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true
+  }
+]
