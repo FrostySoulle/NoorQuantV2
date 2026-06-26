@@ -1,6 +1,3 @@
-#=================================================
-#PART 1 - IMPORTS & CONFIG
-#=================================================
 import json 
 import pandas as pd 
 import yfinance as yf 
@@ -10,10 +7,8 @@ import time
 #FILE PATHS
 UNIVERSE_FILE="../data/halal_universe.json"
 OUTPUT_FILE="../data/research_data.csv"
-LOOKAHEAD_DAYS=20
-#=================================================
-#PART 2 - LOAD UNIVERSE & NIFTY
-#=================================================
+
+#LOAD HALAL UNIVERSE
 print("Loading halal universe....")
 with open(UNIVERSE_FILE, "r") as f:
   universe = json.load(f)
@@ -39,9 +34,7 @@ if nifty.empty:
   
 print(f"NIFTY rows:{len(nifty)}")
 
-#=================================================
-#PART 3 - DOWNLOAD STOCK DATA
-#=================================================
+#Create Research Dataset
 dataset=[]
 failed_stocks=[]
 
@@ -81,18 +74,15 @@ for stock in universe:
         print(f"FAILED AFTER 3 ATTEMPTS: {symbol}")
         failed_stocks.append(symbol)
         continue
-
-#=================================================
-#PART 4 - FEATURE ENGINEERING
-#=================================================
+    
 #Match Stock Date With NIFTY Date
     common_dates = df.index.intersection(nifty.index)
     
-    for i in range(len(common_dates)-LOOKAHEAD_DAYS):
+    for i in range(len(common_dates)-5):
     
       date = common_dates[i]
       next_date = common_dates[i+1]
-      future_date = common_dates[i+LOOKAHEAD_DAYS]
+      future_date_5d = common_dates[i+5]
       stock_open = float(df.loc[date, "Open"])
       stock_close = float(df.loc[date, "Close"])
       nifty_open = float(nifty.loc[date, "Open"])
@@ -106,10 +96,14 @@ for stock in universe:
       rs_open = stock_return - nifty_return
       current_close = float(df.loc[date,"Close"])
       next_close = float(df.loc[next_date, "Close"])
-      future_close = float(df.loc[future_date, "Close"])
+      future_close_5d = float(df.loc[future_date_5d, "Close"])
+      
+      future_return_1d = (
+        (next_close - current_close) / current_close 
+        ) * 100
         
-      future_return = (
-        (future_close - current_close) / current_close 
+      future_return_5d = (
+        (future_close_5d - current_close) / current_close 
         ) * 100
       
       #save_row
@@ -123,7 +117,8 @@ for stock in universe:
         "Stocks_Return":round(stock_return,4),
         "Nifty_Return":round(nifty_return,4),
         "RS_Open":round(rs_open,4),
-        "future_return":round(future_return,4)
+        "future_return_1d":round(future_return_1d,4),
+        "future_return_5d":round(future_return_5d,4)
         })
     
   except Exception as e:
@@ -134,10 +129,6 @@ for stock in universe:
 print("Creating DataFrame")
 
 research_df = pd.DataFrame(dataset)
-
-#=================================================
-#PART 5 - RANKING
-#=================================================
 
 print("Calculating Ranks.....")
 research_df["Rank"] = (
@@ -150,18 +141,10 @@ research_df["Rank"] = (
     .astype(int)
   )
 
-#=================================================
-#PART 7 - EXPORT & REPORTING
-#=================================================
-
 research_df.to_csv(
   OUTPUT_FILE,
   index=False
   )
-
-#=================================================
-#PART 6 - ANALYSIS
-#=================================================
 
 print()
 print("RANK ANALYSIS")
@@ -171,10 +154,10 @@ rank_summary = (
     research_df
     .groupby("Rank")
     .agg(
-        Count=("future_return","count"),
-        Avg_Return=("future_return","mean"),
-        Median_Return=("future_return","median"),
-        Win_Rate=("future_return",
+        Count=("future_return_5d","count"),
+        Avg_Return=("future_return_5d","mean"),
+        Median_Return=("future_return_5d","median"),
+        Win_Rate=("future_return_5d",
                   lambda x: (x > 0).mean() * 100)
     )
 )

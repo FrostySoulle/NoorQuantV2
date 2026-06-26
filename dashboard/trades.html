@@ -2,183 +2,104 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NoorQuant V2</title>
 
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>NoorQuant V2 - Factor Lab</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 </head>
 
-<body>
+<body class="factor-page">
 
-    <aside class="sidebar">
+    <!-- TOP NAV -->
+
+    <header class="topbar">
 
         <div class="logo">
-            NoorQuant
+            NoorQuant | Factor Lab
         </div>
 
-        <ul>
+        <nav class="topnav">
 
-            <li><a href="Dashboard.html">Dashboard</a></li>
-            
-            <li><a href="Hypotheses.html">Hypotheses</a></li>
+            <a href="Dashboard.html">Dashboard</a>
 
-            <li><a href="Research.html">Research</a></li>
+            <a href="Hypotheses.html">Hypotheses</a>
 
-            <li><a href="hu.html">Halal Universe</a></li>
+            <a href="Research.html">Research</a>
 
-            <li><a href="Signals.html">Signals</a></li>
+            <a href="hu.html">Universe</a>
 
-            <li class="active-menu">Trades</li>
+            <a href="Signals.html">Signals</a>
 
-            <li><a href="Analytics.html">Analytics</a></li>
+            <a href="Trades.html">Factor Lab</a>
 
-            <li><a href="Journal.html">Journal</a></li>
+            <a href="Analytics.html">Analytics</a>
 
-            <li><a href="Settings.html">Settings</a></li>
+            <a href="Journal.html">Journal</a>
 
-        </ul>
+            <a href="Settings.html">Settings</a>
 
-    </aside>
+        </nav>
 
-    <main class="main-content">
+    </header>
 
-        <h1>NoorQuant V2</h1>
+    <!-- MAIN -->
 
-        <!-- TOP -->
-
-        <section class="top-grid">
-
-            <div class="card">
-
-                <h2>Research Status</h2>
-
-                <div class="status-grid">
-
-                    <div class="metric">
-                        <div class="metric-value">7</div>
-                        <div class="metric-label">Hypotheses</div>
-                    </div>
-
-                    <div class="metric">
-                        <div class="metric-value">9</div>
-                        <div class="metric-label">Questions</div>
-                    </div>
-
-                    <div class="metric">
-                        <div class="metric-value">0</div>
-                        <div class="metric-label">Completed</div>
-                    </div>
-
-                    <div class="metric">
-                        <div class="metric-value">0</div>
-                        <div class="metric-label">Validated</div>
-                    </div>
-
-                </div>
-
-                <div class="research-phase">
-                    RESEARCH PHASE
-                </div>
-
-            </div>
-
-            <div class="card">
-
-                <h2>Research Progress</h2>
-
-                <div class="progress-row">
-                    <span>H0 Universe Validity</span>
-                    <span class="status not-started">NOT STARTED</span>
-                </div>
-
-                <div class="progress-row">
-                    <span>H1 Relative Strength</span>
-                    <span class="status not-started">NOT STARTED</span>
-                </div>
-
-                <div class="progress-row">
-                    <span>H2 Market Regime</span>
-                    <span class="status not-started">NOT STARTED</span>
-                </div>
-
-                <div class="progress-row">
-                    <span>H3 ORB</span>
-                    <span class="status not-started">NOT STARTED</span>
-                </div>
-
-                <div class="progress-row">
-                    <span>H4 Volume Expansion</span>
-                    <span class="status not-started">NOT STARTED</span>
-                </div>
-
-                <div class="progress-row">
-                    <span>H5 Absolute Strength</span>
-                    <span class="status not-started">NOT STARTED</span>
-                </div>
-
-                <div class="progress-row">
-                    <span>H6 Candidate Selection</span>
-                    <span class="status not-started">NOT STARTED</span>
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- HYPOTHESES -->
+    <main class="factor-content">
 
         <section class="card">
 
-            <h2>Active Hypotheses</h2>
-
-            <div id="hypotheses-container"></div>
-
-        </section>
-
-        <!-- RESEARCH QUESTIONS -->
-
-        <section class="card">
-
-            <h2>Research Questions</h2>
-
-            <div id="questions-container"></div>
-
-        </section>
-
-        <!-- DECISIONS -->
-
-        <section class="card">
-
-            <h2>Recent Decisions</h2>
-
-            <div class="decision-box">
-
-                <div class="decision-date">
-                    2026-06-21
-                </div>
-
-                <div class="decision-title">
-                    Abandon NoorQuant V1 weighted scoring model
-                </div>
-
-                <div class="decision-reason">
-                    Multiple independent reviews identified high overfitting risk.
-                </div>
-
+            <div class="factor-toolbar">
+        
+                <h2>Factor Lab</h2>
+        
+                <select id="sortRank">
+                    <option value="asc">Rank 1 First</option>
+                    <option value="desc">Worst Rank First</option>
+                </select>
+        
             </div>
-
+        
+            <div id="summary-content">
+                Loading...
+            </div>
+        
+            <div class="table-container">
+        
+                <table id="research-table">
+        
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Symbol</th>
+                            <th>Stock Return</th>
+                            <th>Nifty Return</th>
+                            <th>RS Open</th>
+                            <th>Future 1D</th>
+                            <th>Rank</th>
+                        </tr>
+                    </thead>
+        
+                    <tbody id="research-table-body">
+                    </tbody>
+        
+                </table>
+        
+            </div>
+      
         </section>
 
     </main>
 
-    <script src="./assets/js/app.js"></script>
+    <script src="/assets/js/app.js"></script>
 
 </body>
 

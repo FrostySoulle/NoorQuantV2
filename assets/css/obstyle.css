@@ -9,8 +9,7 @@ body{
     background:#0f172a;
     color:#e5e7eb;
     display:flex;
-    height:100vh;
-    overflow:hidden;
+    min-height:100vh;
 }
 
 .sidebar{
@@ -76,6 +75,7 @@ body{
     flex:1;
     overflow-y:auto;
     padding:24px;
+    min-height: 100vh;
 }
 
 .main-content::-webkit-scrollbar{
