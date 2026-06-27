@@ -48,6 +48,9 @@ Failure:
 
 No meaningful difference after costs.
 
+Result: REJECTED
+
+Reason: No significant predictive power found in 1D, 5D or 20D
 ---
 
 H2 - Market Regime
