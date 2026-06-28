@@ -45,7 +45,7 @@ for symbol in stocks:
 
         df = yf.download(
             symbol,
-            period="30d",
+            period="60d",
             interval="15m",
             auto_adjust=True,
             progress=False

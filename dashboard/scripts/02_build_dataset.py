@@ -2,6 +2,7 @@
 #Part 1 Imports 
 #==========================================================
 import pandas as pd 
+import pandas_ta as ta
 import time 
 import json
 pd.set_option("display.max_columns", None)
@@ -58,23 +59,106 @@ for symbol in stocks:
 #==========================================================
 
     common_dates = df.index
+    
+    cum_pv = 0
+    cum_volume = 0
+    last_date = None
+     
+    df["ATR"] = ta.atr(
+        df["High"],
+        df["Low"],
+        df["Close"],
+        length=14
+    )
+    
+    df["EMA20"] = ta.ema(df["Close"],
+    length=20)
 
-    for i in range(1, len(common_dates) - 4):
+    for i in range(2, len(common_dates) - 4):
   
         dt = common_dates[i]
+
+        if pd.isna(df.loc[dt,"ATR"]):
+            continue
+        
+        if pd.isna(df.loc[dt,"EMA20"]):
+            continue
+        
+        today = dt.date()
   
         if df.loc[dt,"Time"] != "09:15":
             continue
-  
+        
+        if today != last_date:
+            cum_pv = 0
+            cum_volume = 0
+            last_date = today
+            
         previous_close = float(df.loc[common_dates[i-1], "Close"])
+        
+        previous_previous_close = float(df.loc[common_dates[i-2],"Close"])
+        
+        previous_day_return = (
+            (previous_close -
+            previous_previous_close)
+            / previous_previous_close
+        )*100
 
         current_open = float(df.loc[dt, "Open"])
-
+        current_close = float(df.loc[dt, "Close"])
+        current_volume = float(df.loc[dt, "Volume"])
+        
+        orb_high=float(df.loc[dt,"High"])
+        orb_low=float(df.loc[dt,"Low"])
+        orb_range=orb_high-orb_low
+        orb_percent = (orb_high-orb_low)/ current_open*100
+        orb_body = abs(current_close-
+        current_open)/current_open*100
+        
         gap = (
             (current_open - previous_close)
             / previous_close
         ) * 100
         
+        past_volumes = []
+
+        for j in range(i-26, i):
+            if j >= 0 and df.iloc[j]["Time"] == "09:15":
+                past_volumes.append(df.iloc[j]["Volume"])
+
+        if len(past_volumes) == 0:
+            continue
+
+        average_volume = pd.Series(past_volumes).mean()
+
+        rvol = current_volume / average_volume
+        
+        typical_price = (
+            current_close +
+            orb_high +
+            orb_low
+        ) /3
+        
+        cum_pv += typical_price * current_volume
+        cum_volume += current_volume
+        
+        vwap = cum_pv / cum_volume
+        
+        VWAP_Distance = (
+            (current_close - vwap)
+            / vwap
+        )*100
+        
+        ATR_Percent =(
+            df.loc[dt,"ATR"]
+            / current_close
+        )*100
+        
+        EMA20_Distance =(
+            (current_close - df.loc[dt,"EMA20"])
+            /df.loc[dt,"EMA20"]
+        )*100
+            
         future15 = common_dates[i+1]
         future30 = common_dates[i+2]
         future60 = common_dates[i+4]
@@ -83,7 +167,6 @@ for symbol in stocks:
 #Part 7 Future Returns
 #==========================================================
 
-        current_close = float(df.loc[dt, "Close"])
         close15 = float(df.loc[future15, "Close"])
         close30 = float(df.loc[future30, "Close"])
         close60 = float(df.loc[future60, "Close"])
@@ -111,6 +194,18 @@ for symbol in stocks:
         "Symbol":symbol,
         
         "Gap":round(gap,4),
+        "Previous_Day_Return":round(previous_day_return,4),
+        "RVOL":round(rvol,4),
+        
+        "ORB_High":round(orb_high,4),
+        "ORB_Low":round(orb_low,4),      
+        "ORB_Range":round(orb_range,4),
+        "ORB_Percent":round(orb_percent,4),
+        "ORB_Body":round(orb_body,4),
+        
+        "VWAP_Distance":round(VWAP_Distance,4),
+        "ATR_Percent":round(ATR_Percent,4),
+        "EMA20_Distance":round(EMA20_Distance,4),
         
         "Future_15m":round(return15,4),
         "Future_30m":round(return30,4),
