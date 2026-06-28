@@ -81,33 +81,34 @@ for symbol in stocks:
         continue
 
     print("Rows:", len(df))
-    df["Time"]=df.index.strftime("%H:%M")
-    
+    df["AvgVolume20"] = (
+    df["Volume"]
+    .rolling(20)
+    .mean()
+    .shift(1)
+    )
 #==========================================================
 #Part 6 Create RS Rows
 #==========================================================
 
     common_dates = df.index
 
-    for i in range(1, len(common_dates) - 4):
+    for i in range(len(common_dates) - 4):
   
         dt = common_dates[i]
   
-        if df.loc[dt,"Time"] != "09:15":
+        future15 = common_dates[i + 1]
+        future30 = common_dates[i + 2]
+        future60 = common_dates[i + 4]
+  
+        volume = float(df.loc[dt, "Volume"])
+
+        avg_volume = float(df.loc[dt, "AvgVolume20"])
+
+        if pd.isna(avg_volume) or avg_volume == 0:
             continue
   
-        previous_close = float(df.loc[common_dates[i-1], "Close"])
-
-        current_open = float(df.loc[dt, "Open"])
-
-        gap = (
-            (current_open - previous_close)
-            / previous_close
-        ) * 100
-        
-        future15 = common_dates[i+1]
-        future30 = common_dates[i+2]
-        future60 = common_dates[i+4]
+        rvol = volume / avg_volume
 
 #==========================================================
 #Part 7 Future Returns
@@ -139,7 +140,7 @@ for symbol in stocks:
         dataset.append({
         "Datetime":dt,        
         "Symbol":symbol,
-        "GAP":round(gap,4),
+        "RVOL":round(rvol,4),
         "Future_15m":round(return15,4),
         "Future_30m":round(return30,4),
         "Future_60m":round(return60,4),
@@ -160,9 +161,9 @@ print(research_df.head())
 print(len(research_df))
 research_df["Rank"]=(
   research_df
-  .groupby("Datetime")["GAP"]
+  .groupby("Datetime")["RVOL"]
   .rank(
-    method="first",
+    method="dense",
     ascending=False
   )
   .astype(int)

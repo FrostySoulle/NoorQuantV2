@@ -1,136 +1,157 @@
 NoorQuant V2 Hypotheses
 
-H0 - Universe Validity
+This document tracks every research hypothesis.
 
-The current halal universe contains sufficient liquidity and opportunity to support a long-only intraday trading strategy.
+Status Legend:
 
-Success:
-
-Enough setups and liquidity exist to justify continued research.
-
-Failure:
-
-Universe produces too few opportunities or cannot scale.
+- 🟡 Planned
+- 🔵 In Progress
+- ✅ Validated
+- ❌ Rejected
 
 ---
 
-H1 - Relative Strength
+H0 - Universe Validity 🟡
 
-Stocks demonstrating stronger Relative Strength outperform weaker stocks over future periods.
+Question
 
-Definitions:
+Is the current halal universe large and liquid enough to generate sufficient trading opportunities?
 
-RS_Open =
-(Stock Return Since Open) - (Nifty Return Since Open)
+Success
 
-RS_15 =
-(Stock Return Last 15m) - (Nifty Return Last 15m)
+- Adequate daily opportunities.
+- Research produces enough high-quality candidates.
+- Strategy remains scalable.
 
-RS_30 =
-(Stock Return Last 30m) - (Nifty Return Last 30m)
+Failure
 
-RS_60 =
-(Stock Return Last 60m) - (Nifty Return Last 60m)
-
-Success:
-
-Top-ranked RS group outperforms bottom-ranked RS group after costs.
-
-Failure:
-
-No meaningful difference after costs.
+- Too few opportunities.
+- Liquidity constraints.
+- Universe requires expansion (e.g. Nifty 500).
 
 ---
 
-H2 - Market Regime
+H1 - Relative Strength ❌
 
-Trading performance differs across market regimes.
+Question
+
+Do stocks with the highest Relative Strength outperform lower-ranked stocks over the next 15, 30 and 60 minutes?
+
+Factor
+
+Relative Strength (RS)
+
+Result
+
+Rejected.
+
+Reason
+
+- Win rate remained close to random.
+- Expectancy remained approximately zero.
+- No consistent advantage across ranks.
+
+---
+
+H2 - Market Regime 🟡
+
+Question
+
+Does strategy performance depend on overall market regime?
 
 Regimes:
 
-- Bull Trend
-- Bear Trend
+- Bull
+- Bear
 - Sideways
 
-Success:
+---
 
-One or more regimes show materially superior expectancy.
+H3 - Opening Range Breakout 🟡
 
-Failure:
+Question
 
-No meaningful performance differences.
+Do Opening Range Breakouts produce positive expectancy?
 
 ---
 
-H3 - Breakout Continuation
+H4 - Relative Volume (RVOL) ❌
 
-Opening Range Breakouts continue in the breakout direction often enough to create positive expectancy.
+Question
 
-Success:
+Do stocks with the highest Relative Volume outperform lower-ranked stocks over the next 15, 30 and 60 minutes?
 
-Positive net expectancy after costs.
+Factor
 
-Failure:
+RVOL = Current Volume / Previous 20-Candle Average Volume
 
-Negative net expectancy after costs.
+Result
 
----
+Rejected.
 
-H4 - Volume Expansion
+Reason
 
-Breakouts accompanied by elevated volume outperform breakouts without elevated volume.
-
-Success:
-
-Higher expectancy for elevated volume group.
-
-Failure:
-
-No measurable difference.
+- Win rate remained close to random.
+- Expectancy remained approximately zero.
+- No consistent separation between ranks.
 
 ---
 
-H5 - Absolute Strength Filter
+H5 - Gap Percentage 🟡
 
-Stocks above both Open and VWAP outperform stocks selected using Relative Strength alone.
+Question
 
-Success:
-
-Improved expectancy and win rate.
-
-Failure:
-
-No measurable improvement.
+Does the opening gap predict future intraday returns?
 
 ---
 
-H6 - Candidate Selection
+H6 - Absolute Strength Filter 🟡
 
-The optimal candidate group size is smaller than the full universe.
+Question
 
-Candidates:
+Do stocks trading above both Open and VWAP outperform stocks selected without this filter?
+
+---
+
+H7 - Multi-Factor Combination 🟡
+
+Question
+
+Can combinations of individually weak factors produce a statistically significant edge?
+
+Examples:
+
+- RS + RVOL
+- Gap + RVOL
+- RS + Gap
+- ORB + RVOL
+
+---
+
+H8 - Candidate Selection 🟡
+
+Question
+
+What is the optimal number of daily candidates?
+
+Groups:
 
 - Top 3
 - Top 5
 - Top 10
 - Top 15
 
-Success:
-
-One group consistently outperforms alternatives.
-
-Failure:
-
-No meaningful differences.
-
 ---
 
 Validation Rules
 
-Every hypothesis must survive:
+A hypothesis is considered validated only if it survives:
 
 - Out-of-sample testing
-- Cost adjustments
-- Slippage assumptions
+- Transaction costs
+- Brokerage
+- Taxes
+- Slippage
+- Multiple market conditions
 
-before being accepted.
+No hypothesis is accepted based solely on historical profitability.

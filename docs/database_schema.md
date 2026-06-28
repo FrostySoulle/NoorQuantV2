@@ -1,4 +1,8 @@
-NoorQuant V2 Research Database
+NoorQuant V2 Research Database Schema
+
+The database stores raw evidence first, derived research second, and simulated trades last.
+
+---
 
 Table: market_days
 
@@ -7,92 +11,68 @@ One row per trading day.
 Columns:
 
 - date
-- nifty_open
-- nifty_high
-- nifty_low
-- nifty_close
-- nifty_vwap
-- regime
-- advancers
-- decliners
-- stocks_above_vwap
-
----
-
-Table: stock_days
-
-One row per stock per day.
-
-Columns:
-
-- date
-- symbol
-- halal_status
-- gap_percent
 - open
 - high
 - low
 - close
 - volume
-- avg_daily_volume
-- avg_traded_value
-- day_return
+- vwap
+- regime
+- advancers
+- decliners
+- stocks_above_vwap
+
+Purpose:
+
+Provides market context for every research observation.
 
 ---
 
-Table: rs_rankings
+Table: stock_bars
 
-One row per stock per evaluation period.
+One row per stock per candle.
 
 Columns:
 
-- date
-- time
+- datetime
 - symbol
-- rs_open
-- rs_15
-- rs_30
-- rs_60
-- rank
+- open
+- high
+- low
+- close
+- volume
+
+Purpose:
+
+Raw intraday data.
+
+Never modify after ingestion.
 
 ---
 
 Table: candidate_observations
 
-Stores all monitored candidates.
+One row per stock per evaluation time.
 
 Columns:
 
-- date
-- time
+- datetime
 - symbol
-- regime
-- price_above_open
-- price_above_vwap
-- volume_ratio
-- rs_rank
-- orb_triggered
+- hypothesis_id
+- metric_name
+- metric_value
+- metric_rank
+
+Examples:
+
+- H1 | RS
+- H4 | RVOL
+- H5 | GAP
+- H6 | OPEN_STRENGTH
 
 Purpose:
 
-Allows comparison between setup and non-setup observations.
-
----
-
-Table: setups
-
-Stores detected setups.
-
-Columns:
-
-- date
-- time
-- symbol
-- regime
-- rs_rank
-- breakout_type
-- volume_ratio
-- trigger_price
+Stores every research candidate before any filters are applied.
 
 ---
 
@@ -102,17 +82,39 @@ Measures future performance.
 
 Columns:
 
-- date
-- time
+- datetime
 - symbol
 - return_15m
 - return_30m
 - return_60m
 - return_eod
-- gross_return
-- net_return
 - mfe
 - mae
+
+Purpose:
+
+Ground truth for every observation.
+
+---
+
+Table: setups
+
+Stores setups produced by a research hypothesis.
+
+Columns:
+
+- datetime
+- symbol
+- hypothesis_id
+- strategy_version
+- trigger_price
+- stop_loss
+- target
+- notes
+
+Purpose:
+
+Contains only observations that satisfy a hypothesis.
 
 ---
 
@@ -124,10 +126,12 @@ Columns:
 
 - date
 - symbol
+- strategy_version
 - entry_time
 - exit_time
 - entry_price
 - exit_price
+- position_size
 - pnl
 - brokerage
 - stt
@@ -140,19 +144,30 @@ Columns:
 
 Purpose:
 
-Trade-level analysis and strategy validation.
+Trade-level validation before live deployment.
 
 ---
 
 Research Data Rules
 
-1. Store raw data whenever possible.
+1. Store raw market data whenever possible.
 2. Never overwrite historical research data.
-3. Store both gross and net performance.
-4. Preserve failed setups.
-5. Preserve non-setups.
-6. Preserve rejected candidates.
+3. Preserve winning and losing observations.
+4. Preserve rejected candidates.
+5. Preserve failed setups.
+6. Store both gross and net performance.
+7. Every research result must be reproducible from raw data and code.
+8. Derived tables may be regenerated at any time.
+9. Never manually edit research results.
 
-Data is cheap.
+---
 
-Lost evidence is expensive.
+Research Philosophy
+
+Raw data is permanent.
+
+Research scripts are reproducible.
+
+Hypotheses evolve.
+
+Evidence is never discarded.
