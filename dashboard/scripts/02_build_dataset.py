@@ -229,6 +229,9 @@ for symbol in stocks:
         "Future_15m":round(return15,4),
         "Future_30m":round(return30,4),
         "Future_60m":round(return60,4),
+        "RS_15": round(RS_15,4),
+        "RS_30": round(RS_30,4),
+        "RS_60": round(RS_60,4),
         })
 #==========================================================
 #Part 9 DataFrame
