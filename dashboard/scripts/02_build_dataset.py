@@ -107,6 +107,25 @@ for symbol in stocks:
         current_open = float(df.loc[dt, "Open"])
         current_close = float(df.loc[dt, "Close"])
         current_volume = float(df.loc[dt, "Volume"])
+
+        close_15 = float(df.loc[common_dates[i-1], "Close"])
+        close_30 = float(df.loc[common_dates[i-2], "Close"])
+        close_60 = float(df.loc[common_dates[i-4], "Close"])
+
+        RS_15 = (
+    (current_close - close_15)
+    / close_15
+) * 100
+
+        RS_30 = (
+    (current_close - close_30)
+    / close_30
+) * 100
+
+        RS_60 = (
+    (current_close - close_60)
+    / close_60
+) * 100
         
         orb_high=float(df.loc[dt,"High"])
         orb_low=float(df.loc[dt,"Low"])
