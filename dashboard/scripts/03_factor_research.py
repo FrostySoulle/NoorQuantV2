@@ -2,6 +2,7 @@
 #Part 1 Imports
 #==========================================================
 import pandas as pd
+import sys
 
 pd.set_option("display.max_columns", None)
 pd.set_option("display.width", 200)
@@ -23,7 +24,7 @@ print("Days :", master_df["Datetime"].dt.date.nunique())
 #Part 3 Select Factor
 #==========================================================
 
-FACTOR_COLUMN = "RS"
+FACTOR_COLUMN = sys.argv[1]
 
 print()
 print("====================================")
@@ -34,6 +35,25 @@ print("====================================")
 #==========================================================
 
 research_df = master_df.copy()
+
+FILTERS = sys.argv[2:]
+
+for f in FILTERS:
+
+    if f == "RVOL>1":
+        research_df = research_df[
+            research_df["RVOL"] > 1
+        ]
+
+    elif f == "Gap>0":
+        research_df = research_df[
+            research_df["Gap"] > 0
+        ]
+
+    elif f == "Gap<0":
+        research_df = research_df[
+            research_df["Gap"] < 0
+        ]
 
 research_df =research_df[research_df["RVOL"]>1]
 
