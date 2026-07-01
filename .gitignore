@@ -2,3 +2,4 @@ venv/
 __pycache__/
 *.pyc
 dashboard/data/research_data.csv
+kite/config.json

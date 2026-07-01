@@ -1,0 +1,242 @@
+[
+  {
+    "symbol": "ASIANPAINT",
+    "name": "Asian Paints Limited",
+    "is_halal": true,
+    "source": "Nifty50.csv",
+    "active": true,
+    "instrument_token": 60417
+  },
+  {
+    "symbol": "BRITANNIA",
+    "name": "Britannia Industries Limited",
+    "is_halal": true,
+    "source": "Nifty50.csv",
+    "active": true,
+    "instrument_token": 140033
+  },
+  {
+    "symbol": "CIPLA",
+    "name": "Cipla Limited",
+    "is_halal": true,
+    "source": "Nifty50.csv",
+    "active": true,
+    "instrument_token": 177665
+  },
+  {
+    "symbol": "COALINDIA",
+    "name": "Coal India Limited",
+    "is_halal": true,
+    "source": "Nifty50.csv",
+    "active": true,
+    "instrument_token": 5215745
+  },
+  {
+    "symbol": "DRREDDY",
+    "name": "Dr Reddys Laboratories Ltd",
+    "is_halal": true,
+    "source": "Nifty50.csv",
+    "active": true,
+    "instrument_token": 225537
+  },
+  {
+    "symbol": "HINDUNILVR",
+    "name": "Hindustan Unilever Limited",
+    "is_halal": true,
+    "source": "Nifty50.csv",
+    "active": true,
+    "instrument_token": 356865
+  },
+  {
+    "symbol": "SUNPHARMA",
+    "name": "Sun Pharmaceutical Industries Limited",
+    "is_halal": true,
+    "source": "Nifty50.csv",
+    "active": true,
+    "instrument_token": 857857
+  },
+  {
+    "symbol": "TATACONSUM",
+    "name": "Tata Consumer Products Limited",
+    "is_halal": true,
+    "source": "Nifty50.csv",
+    "active": true,
+    "instrument_token": 878593
+  },
+  {
+    "symbol": "DIVISLAB",
+    "name": "Divi's Laboratories Limited",
+    "is_halal": true,
+    "source": "Nifty100.csv",
+    "active": true,
+    "instrument_token": 2800641
+  },
+  {
+    "symbol": "DMART",
+    "name": "Avenue Supermarts Limited",
+    "is_halal": true,
+    "source": "Nifty100.csv",
+    "active": true,
+    "instrument_token": 5097729
+  },
+  {
+    "symbol": "GAIL",
+    "name": "GAIL (India) Limited",
+    "is_halal": true,
+    "source": "Nifty100.csv",
+    "active": true,
+    "instrument_token": 1207553
+  },
+  {
+    "symbol": "LODHA",
+    "name": "Lodha Developers Ltd",
+    "is_halal": true,
+    "source": "Nifty100.csv",
+    "active": true,
+    "instrument_token": 824321
+  },
+  {
+    "symbol": "PIDILITIND",
+    "name": "Pidilite Industries Limited",
+    "is_halal": true,
+    "source": "Nifty100.csv",
+    "active": true,
+    "instrument_token": 681985
+  },
+  {
+    "symbol": "ZYDUSLIFE",
+    "name": "Zydus Lifesciences Limited",
+    "is_halal": true,
+    "source": "Nifty100.csv",
+    "active": true,
+    "instrument_token": 2029825
+  },
+  {
+    "symbol": "ACC",
+    "name": "ACC Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true,
+    "instrument_token": 5633
+  },
+  {
+    "symbol": "ALKEM",
+    "name": "Alkem Laboratories Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true,
+    "instrument_token": 2995969
+  },
+  {
+    "symbol": "APLAPOLLO",
+    "name": "APL Apollo Tubes Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true,
+    "instrument_token": 6599681
+  },
+  {
+    "symbol": "ASTRAL",
+    "name": "Astral Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true,
+    "instrument_token": 3691009
+  },
+  {
+    "symbol": "AUROPHARMA",
+    "name": "Aurobindo Pharma Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true,
+    "instrument_token": 70401
+  },
+  {
+    "symbol": "CGPOWER",
+    "name": "CG Power and Industrial Solutions Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true,
+    "instrument_token": 194561
+  },
+  {
+    "symbol": "CONCOR",
+    "name": "Container Corporation of India Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true,
+    "instrument_token": 1215745
+  },
+  {
+    "symbol": "CUMMINSIND",
+    "name": "Cummins India Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true,
+    "instrument_token": 486657
+  },
+  {
+    "symbol": "KPITTECH",
+    "name": "KPIT Technologies Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true,
+    "instrument_token": 2478849
+  },
+  {
+    "symbol": "MARICO",
+    "name": "Marico Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true,
+    "instrument_token": 1041153
+  },
+  {
+    "symbol": "MRF",
+    "name": "MRF Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true,
+    "instrument_token": 582913
+  },
+  {
+    "symbol": "PIIND",
+    "name": "PI Industries Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true,
+    "instrument_token": 6191105
+  },
+  {
+    "symbol": "POLYCAB",
+    "name": "Polycab India Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true,
+    "instrument_token": 2455041
+  },
+  {
+    "symbol": "SUPREMEIND",
+    "name": "The Supreme Industries Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true,
+    "instrument_token": 860929
+  },
+  {
+    "symbol": "SUZLON",
+    "name": "Suzlon Energy Limited",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true,
+    "instrument_token": 3076609
+  },
+  {
+    "symbol": "VOLTAS",
+    "name": "Voltas Ltd",
+    "is_halal": true,
+    "source": "NiftyMidCap50.csv",
+    "active": true,
+    "instrument_token": 951809
+  }
+]

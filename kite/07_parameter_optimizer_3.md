@@ -1,0 +1,145 @@
+# NoorQuant Parameter Optimization
+
+## Summary
+
+- Combination : **VWAP_Distance + Previous_Day_Return + Gap**
+- Timeframes Tested : 3
+- Maximum Rank Tested : 30
+- Total Experiments : 90
+
+---
+
+## Best Parameters
+
+- Timeframe : **60 Min**
+- Rank : **20**
+- Score : **0.185**
+- Trades : **38**
+- Coverage : **3.33%**
+- Win Rate : **63.16%**
+- Avg Return : **0.233**
+- Median Return : **0.130**
+
+---
+
+## Top 20
+
+| Combination                               | Timeframe   |   Rank |    60 |    120 |    180 |    365 |    730 |   Score |   Trades |   Coverage |   Win Rate |   Avg Return |   Median Return |   Overall Rank |
+|:------------------------------------------|:------------|-------:|------:|-------:|-------:|-------:|-------:|--------:|---------:|-----------:|-----------:|-------------:|----------------:|---------------:|
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |     20 | 0.233 |  0.212 |  0.134 |  0.089 |  0.031 |   0.185 |       38 |       3.33 |      63.16 |        0.233 |           0.13  |              1 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |     24 | 0.334 |  0.094 |  0.051 |  0.03  | -0.016 |   0.16  |       38 |       3.33 |      60.53 |        0.334 |           0.227 |              2 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |     10 | 0.165 |  0.152 |  0.093 |  0.006 | -0.074 |   0.123 |       38 |       3.33 |      60.53 |        0.165 |           0.071 |              3 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |     24 | 0.229 |  0.044 |  0.009 |  0.019 | -0.006 |   0.098 |       38 |       3.33 |      65.79 |        0.229 |           0.086 |              4 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |      7 | 0.169 |  0.082 |  0.056 |  0.019 | -0.012 |   0.098 |       38 |       3.33 |      60.53 |        0.169 |           0.064 |              5 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |     19 | 0.175 |  0.049 |  0.039 | -0     | -0.02  |   0.084 |       38 |       3.33 |      47.37 |        0.175 |          -0.085 |              6 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |      1 | 0.122 |  0.055 |  0.107 |  0.023 | -0.016 |   0.084 |       38 |       3.33 |      50    |        0.122 |           0.009 |              7 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |      7 | 0.164 |  0.065 |  0.028 | -0.009 | -0.019 |   0.081 |       38 |       3.33 |      50    |        0.164 |          -0.002 |              8 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |     20 | 0.078 |  0.102 |  0.076 |  0.036 |  0.018 |   0.078 |       38 |       3.33 |      57.89 |        0.078 |           0.047 |              9 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |     15 | 0.178 |  0.023 |  0.016 | -0.009 | -0.027 |   0.071 |       38 |       3.33 |      63.16 |        0.178 |           0.215 |             10 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |     13 | 0.224 | -0.015 | -0.006 | -0.013 | -0.029 |   0.071 |       38 |       3.33 |      52.63 |        0.224 |           0.018 |             11 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |     20 | 0.067 |  0.097 |  0.059 |  0.039 |  0.008 |   0.07  |       38 |       3.33 |      47.37 |        0.067 |          -0.049 |             12 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |     10 | 0.116 |  0.018 |  0.005 | -0.025 | -0.071 |   0.043 |       38 |       3.33 |      50    |        0.123 |           0.005 |             13 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |     13 | 0.143 | -0.019 | -0.008 | -0.027 | -0.029 |   0.039 |       38 |       3.33 |      57.89 |        0.152 |           0.057 |             14 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |     26 | 0.12  | -0.028 |  0.003 |  0.023 | -0.006 |   0.038 |       38 |       3.33 |      52.63 |        0.129 |           0.011 |             15 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |      3 | 0.098 |  0.031 | -0.009 | -0.04  | -0.02  |   0.036 |       38 |       3.33 |      60.53 |        0.114 |           0.074 |             16 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |     19 | 0.08  |  0.017 |  0.006 |  0.002 |  0.003 |   0.035 |       38 |       3.33 |      42.11 |        0.08  |          -0.032 |             17 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |     12 | 0.025 |  0.056 |  0.045 | -0.024 | -0.029 |   0.031 |       38 |       3.33 |      42.11 |        0.025 |          -0.088 |             18 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |      8 | 0.135 | -0.029 | -0.046 | -0.014 | -0.02  |   0.027 |       38 |       3.33 |      63.16 |        0.135 |           0.126 |             19 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |      1 | 0.048 |  0.019 |  0.024 | -0.01  | -0.017 |   0.026 |       38 |       3.33 |      63.16 |        0.048 |           0.149 |             20 |
+
+---
+
+## Full Leaderboard
+
+| Combination                               | Timeframe   |   Rank |     60 |    120 |    180 |    365 |    730 |   Score |   Trades |   Coverage |   Win Rate |   Avg Return |   Median Return |   Overall Rank |
+|:------------------------------------------|:------------|-------:|-------:|-------:|-------:|-------:|-------:|--------:|---------:|-----------:|-----------:|-------------:|----------------:|---------------:|
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |     20 |  0.233 |  0.212 |  0.134 |  0.089 |  0.031 |   0.185 |       38 |       3.33 |      63.16 |        0.233 |           0.13  |              1 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |     24 |  0.334 |  0.094 |  0.051 |  0.03  | -0.016 |   0.16  |       38 |       3.33 |      60.53 |        0.334 |           0.227 |              2 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |     10 |  0.165 |  0.152 |  0.093 |  0.006 | -0.074 |   0.123 |       38 |       3.33 |      60.53 |        0.165 |           0.071 |              3 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |     24 |  0.229 |  0.044 |  0.009 |  0.019 | -0.006 |   0.098 |       38 |       3.33 |      65.79 |        0.229 |           0.086 |              4 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |      7 |  0.169 |  0.082 |  0.056 |  0.019 | -0.012 |   0.098 |       38 |       3.33 |      60.53 |        0.169 |           0.064 |              5 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |     19 |  0.175 |  0.049 |  0.039 | -0     | -0.02  |   0.084 |       38 |       3.33 |      47.37 |        0.175 |          -0.085 |              6 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |      1 |  0.122 |  0.055 |  0.107 |  0.023 | -0.016 |   0.084 |       38 |       3.33 |      50    |        0.122 |           0.009 |              7 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |      7 |  0.164 |  0.065 |  0.028 | -0.009 | -0.019 |   0.081 |       38 |       3.33 |      50    |        0.164 |          -0.002 |              8 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |     20 |  0.078 |  0.102 |  0.076 |  0.036 |  0.018 |   0.078 |       38 |       3.33 |      57.89 |        0.078 |           0.047 |              9 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |     15 |  0.178 |  0.023 |  0.016 | -0.009 | -0.027 |   0.071 |       38 |       3.33 |      63.16 |        0.178 |           0.215 |             10 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |     13 |  0.224 | -0.015 | -0.006 | -0.013 | -0.029 |   0.071 |       38 |       3.33 |      52.63 |        0.224 |           0.018 |             11 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |     20 |  0.067 |  0.097 |  0.059 |  0.039 |  0.008 |   0.07  |       38 |       3.33 |      47.37 |        0.067 |          -0.049 |             12 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |     10 |  0.116 |  0.018 |  0.005 | -0.025 | -0.071 |   0.043 |       38 |       3.33 |      50    |        0.123 |           0.005 |             13 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |     13 |  0.143 | -0.019 | -0.008 | -0.027 | -0.029 |   0.039 |       38 |       3.33 |      57.89 |        0.152 |           0.057 |             14 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |     26 |  0.12  | -0.028 |  0.003 |  0.023 | -0.006 |   0.038 |       38 |       3.33 |      52.63 |        0.129 |           0.011 |             15 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |      3 |  0.098 |  0.031 | -0.009 | -0.04  | -0.02  |   0.036 |       38 |       3.33 |      60.53 |        0.114 |           0.074 |             16 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |     19 |  0.08  |  0.017 |  0.006 |  0.002 |  0.003 |   0.035 |       38 |       3.33 |      42.11 |        0.08  |          -0.032 |             17 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |     12 |  0.025 |  0.056 |  0.045 | -0.024 | -0.029 |   0.031 |       38 |       3.33 |      42.11 |        0.025 |          -0.088 |             18 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |      8 |  0.135 | -0.029 | -0.046 | -0.014 | -0.02  |   0.027 |       38 |       3.33 |      63.16 |        0.135 |           0.126 |             19 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |      1 |  0.048 |  0.019 |  0.024 | -0.01  | -0.017 |   0.026 |       38 |       3.33 |      63.16 |        0.048 |           0.149 |             20 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |     24 |  0.065 |  0.019 | -0.007 | -0.019 | -0.022 |   0.024 |       38 |       3.33 |      55.26 |        0.065 |           0.038 |             21 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |     23 |  0.008 | -0.011 |  0.099 |  0.022 |  0.019 |   0.023 |       38 |       3.33 |      36.84 |        0.008 |          -0.21  |             22 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |      7 |  0.103 | -0.018 | -0.039 | -0.012 | -0.027 |   0.021 |       38 |       3.33 |      50    |        0.103 |           0.01  |             23 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |     10 |  0.059 |  0.021 | -0.007 | -0.041 | -0.045 |   0.019 |       38 |       3.33 |      50    |        0.059 |          -0.008 |             24 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |     17 |  0.1   | -0.03  | -0.027 | -0.018 | -0.045 |   0.018 |       38 |       3.33 |      65.79 |        0.1   |           0.097 |             25 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |     18 |  0.021 |  0.044 | -0.006 | -0.02  | -0.011 |   0.016 |       38 |       3.33 |      55.26 |        0.021 |           0.047 |             26 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |     29 |  0.019 |  0.02  |  0.003 |  0.005 |  0.002 |   0.014 |       38 |       3.33 |      55.26 |        0.027 |           0.042 |             27 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |     25 |  0.046 | -0.022 |  0.009 | -0     |  0.009 |   0.012 |       38 |       3.33 |      50    |        0.046 |           0.04  |             28 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |     13 |  0.065 | -0.007 | -0.018 | -0.035 | -0.018 |   0.012 |       38 |       3.33 |      42.11 |        0.072 |          -0.01  |             29 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |     18 | -0.019 |  0.042 |  0.01  | -0.002 |  0.024 |   0.008 |       38 |       3.33 |      44.74 |       -0.011 |          -0.017 |             30 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |     16 |  0.055 |  0.012 | -0.071 | -0.038 | -0.037 |   0.003 |       38 |       3.33 |      44.74 |        0.055 |          -0.029 |             31 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |     21 |  0.019 | -0.043 |  0.032 |  0.007 | -0.053 |   0.001 |       38 |       3.33 |      52.63 |        0.019 |           0.015 |             32 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |     19 |  0.031 | -0.033 |  0.002 | -0.009 | -0.005 |   0     |       38 |       3.33 |      39.47 |        0.04  |          -0.033 |             33 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |     23 |  0.009 | -0.02  |  0.018 | -0.021 | -0.001 |  -0.002 |       38 |       3.33 |      50    |        0.009 |           0.001 |             34 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |     29 |  0.032 | -0.088 | -0.007 |  0.079 | -0.003 |  -0.005 |       38 |       3.33 |      50    |        0.044 |           0.035 |             35 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |     15 |  0.028 | -0.036 | -0.013 | -0.034 | -0.032 |  -0.009 |       38 |       3.33 |      55.26 |        0.038 |           0.024 |             36 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |     12 | -0.019 |  0.001 |  0.011 | -0.035 | -0.04  |  -0.01  |       38 |       3.33 |      44.74 |       -0.019 |          -0.08  |             37 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |     12 | -0.002 | -0.04  |  0.007 | -0.014 | -0.005 |  -0.013 |       38 |       3.33 |      34.21 |       -0.002 |          -0.11  |             38 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |     23 | -0.006 | -0.061 |  0.036 | -0.005 | -0.011 |  -0.014 |       38 |       3.33 |      44.74 |       -0.006 |          -0.023 |             39 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |     17 |  0.007 | -0.043 | -0.017 | -0.019 | -0.017 |  -0.017 |       38 |       3.33 |      55.26 |        0.016 |           0.027 |             40 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |     26 | -0.027 | -0.032 | -0.032 |  0.016 |  0.007 |  -0.023 |       38 |       3.33 |      36.84 |       -0.02  |          -0.061 |             41 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |     14 |  0.032 | -0.065 | -0.078 | -0.009 | -0.008 |  -0.025 |       38 |       3.33 |      52.63 |        0.032 |           0.02  |             42 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |     18 | -0.076 |  0.014 | -0.015 |  0.005 |  0.039 |  -0.025 |       38 |       3.33 |      39.47 |       -0.076 |          -0.12  |             43 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |     22 | -0.025 | -0.037 | -0.018 | -0.014 |  0.012 |  -0.026 |       38 |       3.33 |      57.89 |       -0.018 |           0.02  |             44 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |     28 |  0.008 | -0.085 | -0.02  | -0.018 | -0.031 |  -0.03  |       38 |       3.33 |      42.11 |        0.008 |          -0.068 |             45 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |      4 |  0.038 | -0.093 | -0.056 | -0.037 |  0.001 |  -0.031 |       38 |       3.33 |      47.37 |        0.038 |          -0.036 |             46 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |     29 | -0.04  | -0.066 | -0.028 |  0.027 | -0.002 |  -0.036 |       38 |       3.33 |      47.37 |       -0.04  |          -0.04  |             47 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |     27 | -0.074 | -0.031 | -0.005 | -0.011 | -0.017 |  -0.038 |       38 |       3.33 |      42.11 |       -0.074 |          -0.073 |             48 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |     22 |  0.021 | -0.095 | -0.059 | -0.044 | -0.008 |  -0.04  |       38 |       3.33 |      60.53 |        0.032 |           0.077 |             49 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |     26 | -0.008 | -0.091 | -0.059 |  0.007 |  0.008 |  -0.041 |       38 |       3.33 |      36.84 |       -0.008 |          -0.142 |             50 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |     21 | -0.1   | -0.025 |  0.015 | -0.014 | -0.026 |  -0.042 |       38 |       3.33 |      34.21 |       -0.1   |          -0.073 |             51 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |     25 | -0.038 | -0.067 | -0.024 | -0.029 | -0.009 |  -0.043 |       38 |       3.33 |      44.74 |       -0.025 |          -0.093 |             52 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |      8 | -0.027 | -0.078 | -0.045 | -0.01  | -0.006 |  -0.043 |       38 |       3.33 |      44.74 |       -0.027 |          -0.068 |             53 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |      3 |  0.014 | -0.092 | -0.057 | -0.065 | -0.037 |  -0.044 |       38 |       3.33 |      42.11 |        0.014 |          -0.063 |             54 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |     22 | -0.027 | -0.09  | -0.04  | -0.024 |  0.004 |  -0.048 |       38 |       3.33 |      50    |       -0.001 |           0.014 |             55 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |      9 | -0.086 | -0.023 | -0.038 | -0.032 | -0.008 |  -0.049 |       38 |       3.33 |      42.11 |       -0.086 |          -0.053 |             56 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |     28 | -0.063 | -0.073 | -0.024 | -0.019 | -0.017 |  -0.051 |       38 |       3.33 |      42.11 |       -0.051 |          -0.112 |             57 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |      9 | -0.079 | -0.021 | -0.046 | -0.054 | -0.04  |  -0.051 |       38 |       3.33 |      42.11 |       -0.079 |          -0.183 |             58 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |     15 | -0.035 | -0.071 | -0.064 | -0.045 | -0.022 |  -0.053 |       38 |       3.33 |      36.84 |       -0.035 |          -0.042 |             59 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |      4 |  0.055 | -0.147 | -0.099 | -0.086 | -0.009 |  -0.057 |       38 |       3.33 |      47.37 |        0.055 |          -0.026 |             60 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |     25 | -0.085 | -0.056 | -0.059 | -0.018 | -0.007 |  -0.061 |       38 |       3.33 |      36.84 |       -0.085 |          -0.076 |             61 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |     17 | -0.033 | -0.108 | -0.054 | -0.039 | -0.041 |  -0.061 |       38 |       3.33 |      42.11 |       -0.033 |          -0.024 |             62 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |      2 | -0.098 | -0.045 | -0.034 | -0.043 | -0.035 |  -0.061 |       38 |       3.33 |      34.21 |       -0.098 |          -0.148 |             63 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |      9 | -0.12  | -0.037 | -0.024 | -0.028 | -0.014 |  -0.062 |       38 |       3.33 |      42.11 |       -0.12  |          -0.096 |             64 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |      3 | -0.025 | -0.087 | -0.09  | -0.077 | -0.053 |  -0.064 |       38 |       3.33 |      55.26 |       -0.025 |           0.034 |             65 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |     27 | -0.12  | -0.069 |  0.011 | -0.022 | -0.023 |  -0.064 |       38 |       3.33 |      42.11 |       -0.108 |          -0.038 |             66 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |     11 | -0.089 | -0.057 | -0.052 | -0.038 | -0.037 |  -0.064 |       38 |       3.33 |      36.84 |       -0.089 |          -0.094 |             67 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |      8 | -0.097 | -0.067 | -0.036 | -0.028 | -0.028 |  -0.066 |       38 |       3.33 |      34.21 |       -0.097 |          -0.133 |             68 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |     27 | -0.049 | -0.1   | -0.051 | -0.064 | -0.063 |  -0.067 |       38 |       3.33 |      44.74 |       -0.049 |          -0.072 |             69 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |     14 | -0.026 | -0.104 | -0.1   | -0.056 | -0.024 |  -0.069 |       38 |       3.33 |      47.37 |       -0.015 |          -0.01  |             70 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |      6 | -0.121 | -0.033 | -0.047 | -0.052 | -0.036 |  -0.069 |       38 |       3.33 |      39.47 |       -0.121 |          -0.142 |             71 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |     14 | -0.072 | -0.075 | -0.092 | -0.047 | -0.009 |  -0.073 |       38 |       3.33 |      42.11 |       -0.072 |          -0.076 |             72 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |     21 | -0.122 | -0.096 |  0.001 | -0.018 | -0.051 |  -0.074 |       38 |       3.33 |      47.37 |       -0.122 |          -0.042 |             73 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |      1 | -0.112 | -0.083 | -0.054 | -0.04  | -0.019 |  -0.081 |       38 |       3.33 |      52.63 |       -0.112 |           0.051 |             74 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |     30 | -0.111 | -0.079 | -0.057 | -0.046 | -0.019 |  -0.081 |       38 |       3.33 |      36.84 |       -0.111 |          -0.086 |             75 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |     11 | -0.1   | -0.091 | -0.076 | -0.035 | -0.038 |  -0.083 |       38 |       3.33 |      44.74 |       -0.1   |          -0.115 |             76 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |      4 | -0.022 | -0.178 | -0.071 | -0.05  | -0.001 |  -0.083 |       38 |       3.33 |      47.37 |       -0.022 |          -0.017 |             77 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |     28 | -0.152 | -0.069 | -0.044 | -0.025 |  0.001 |  -0.087 |       38 |       3.33 |      31.58 |       -0.152 |          -0.164 |             78 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |      2 | -0.139 | -0.081 | -0.054 | -0.077 | -0.09  |  -0.095 |       38 |       3.33 |      42.11 |       -0.139 |          -0.119 |             79 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |      6 | -0.124 | -0.092 | -0.067 | -0.074 | -0.057 |  -0.095 |       38 |       3.33 |      36.84 |       -0.112 |          -0.209 |             80 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |     16 | -0.108 | -0.089 | -0.114 | -0.079 | -0.052 |  -0.099 |       38 |       3.33 |      31.58 |       -0.099 |          -0.138 |             81 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |      5 | -0.096 | -0.124 | -0.125 | -0.089 | -0.062 |  -0.109 |       38 |       3.33 |      47.37 |       -0.096 |          -0.017 |             82 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |      6 | -0.128 | -0.124 | -0.115 | -0.097 | -0.073 |  -0.12  |       38 |       3.33 |      42.11 |       -0.128 |          -0.153 |             83 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |      2 | -0.161 | -0.129 | -0.068 | -0.073 | -0.061 |  -0.12  |       38 |       3.33 |      36.84 |       -0.161 |          -0.114 |             84 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |     30 | -0.176 | -0.136 | -0.069 | -0.04  | -0.01  |  -0.122 |       38 |       3.33 |      44.74 |       -0.176 |          -0.059 |             85 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |     11 | -0.18  | -0.146 | -0.087 | -0.041 | -0.039 |  -0.13  |       38 |       3.33 |      42.11 |       -0.18  |          -0.174 |             86 |
+| VWAP_Distance + Previous_Day_Return + Gap | 15 Min      |     16 | -0.161 | -0.139 | -0.121 | -0.076 | -0.038 |  -0.134 |       38 |       3.33 |      28.95 |       -0.161 |          -0.119 |             87 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |      5 | -0.154 | -0.147 | -0.149 | -0.1   | -0.083 |  -0.143 |       38 |       3.33 |      31.58 |       -0.154 |          -0.235 |             88 |
+| VWAP_Distance + Previous_Day_Return + Gap | 60 Min      |     30 | -0.201 | -0.16  | -0.112 | -0.046 | -0.004 |  -0.148 |       38 |       3.33 |      36.84 |       -0.201 |          -0.161 |             89 |
+| VWAP_Distance + Previous_Day_Return + Gap | 30 Min      |      5 | -0.208 | -0.18  | -0.141 | -0.108 | -0.081 |  -0.171 |       38 |       3.33 |      42.11 |       -0.208 |          -0.075 |             90 |

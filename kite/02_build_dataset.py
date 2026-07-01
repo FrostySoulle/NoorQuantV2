@@ -4,14 +4,21 @@
 import pandas as pd 
 import time 
 import json
+import sys
 pd.set_option("display.max_columns", None)
 pd.set_option("display.width", 200)
+#==========================================================
+# Part 2 Dataset Length
+#==========================================================
 
+DAYS = int(sys.argv[1])
+
+print("Creating", DAYS, "day dataset")
 #==========================================================
 #Part 2 Stocks 
 #==========================================================
 
-UNIVERSE_FILE = "../data/halal_universe.json"
+UNIVERSE_FILE = "halal_universe.json"
 
 print("Loading Halal Universe...")
 
@@ -21,7 +28,7 @@ with open(UNIVERSE_FILE, "r") as f:
 stocks = []
 
 for stock in universe:
-    stocks.append(stock["symbol"] + ".NS")
+    stocks.append(stock["symbol"])
 
 print("Loaded", len(stocks), "stocks")
 
@@ -34,23 +41,27 @@ dataset=[]
 #Part 5 Loop stocks
 #==========================================================
 for symbol in stocks:
-
+    skipped_zero_volume = 0
     print()
     print("Processing", symbol)
 
-    filename = "../data/raw/" + symbol.replace(".NS","") + ".csv"
+    filename = "data/raw/" + symbol + ".csv"
 
     df = pd.read_csv(
         filename,
         index_col=0,
         parse_dates=True
     )
-
+    
+    cutoff = df.index.max() - pd.Timedelta(days=DAYS)
+    df = df[df.index >= cutoff]
+    
     if df.empty:
         print("FAILED")
         continue
 
     print("Rows:", len(df))
+    
     df["Time"]=df.index.strftime("%H:%M")
     
 #==========================================================
@@ -118,6 +129,20 @@ for symbol in stocks:
         current_open = float(df.loc[dt, "Open"])
         current_close = float(df.loc[dt, "Close"])
         current_volume = float(df.loc[dt, "Volume"])
+        
+        if current_volume == 0:
+          skipped_zero_volume += 1
+
+          print(
+              f"{symbol} | "
+              f"{dt} | "
+              f"O:{current_open} "
+              f"H:{orb_high} "
+              f"L:{orb_low} "
+              f"C:{current_close}"
+          )
+      
+          continue
 
         close_15 = float(df.loc[common_dates[i-1], "Close"])
         close_30 = float(df.loc[common_dates[i-2], "Close"])
@@ -154,7 +179,10 @@ for symbol in stocks:
 
         for j in range(i-26, i):
             if j >= 0 and df.iloc[j]["Time"] == "09:15":
-                past_volumes.append(df.iloc[j]["Volume"])
+                volume = df.iloc[j]["Volume"]
+
+                if volume > 0:
+                    past_volumes.append(volume)
 
         if len(past_volumes) == 0:
             continue
@@ -171,7 +199,7 @@ for symbol in stocks:
         
         cum_pv += typical_price * current_volume
         cum_volume += current_volume
-        
+    
         vwap = cum_pv / cum_volume
         
         VWAP_Distance = (
@@ -215,7 +243,7 @@ for symbol in stocks:
             (close60 - current_close)
             / current_close
         ) * 100
-        
+
 #==========================================================
 #Part 8 Save Row
 #==========================================================
@@ -244,6 +272,8 @@ for symbol in stocks:
         "RS_30": round(RS_30,4),
         "RS_60": round(RS_60,4),
         })
+    print(f"{symbol}: Skipped {skipped_zero_volume} zero-volume candles")
+
 #==========================================================
 #Part 9 DataFrame
 #==========================================================
@@ -257,9 +287,9 @@ print("Rows:",len(master_df))
 #Part 10 Save Master Dataset
 #==========================================================
 master_df.to_csv(
-    "../data/processed/master_dataset.csv",
+    f"data/processed/{DAYS}d_master_dataset.csv",
     index=False
 )
 print()
 print("Saved:")
-print("../data/processed/master_dataset.csv")
+print(f"data/processed/{DAYS}d_master_dataset.csv")

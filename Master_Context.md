@@ -21,6 +21,97 @@ Phase: Research
 Validated Strategy:
 None
 
+## Current Champion Models
+
+### 🥇 4-Factor Champion
+
+Status:
+Current Overall Champion
+
+Combination
+
+- ORB_Range
+- RS_15
+- ORB_Low
+- ATR_Percent
+
+Timeframe:
+60 Min
+
+Rank:
+15
+
+Optimized Filters
+
+- ORB_Range < 21.4
+- ATR_Percent > 0.3633
+- RS_15 > -1.0627
+
+Weighted Score:
+0.493
+
+Win Rate:
+85%
+
+Trades:
+20
+
+## Research Records
+
+Best Single Factor:
+None
+
+Best 3-Factor Model:
+VWAP_Distance + ORB_Range + RS_15
+Score: 0.330
+
+Best 4-Factor Model:
+ORB_Range + RS_15 + ORB_Low + ATR_Percent
+Score: 0.493
+
+Status:
+Pending Model Validation
+
+---
+
+### 🥈 3-Factor Champion
+
+Status:
+Best 3-Factor Model
+
+Combination
+
+- VWAP_Distance
+- ORB_Range
+- RS_15
+
+Timeframe:
+60 Min
+
+Rank:
+10
+
+Optimized Filters
+
+- ORB_Range < 18.9
+- VWAP_Distance > -0.2523
+- RS_15 > -1.5985
+
+Weighted Score:
+0.330
+
+Win Rate:
+70%
+
+Trades:
+20
+
+Status:
+Pending Model Validation
+Status
+Research Candidate
+(Not yet validated)
+
 Research Engine:
 Completed (v1.0)
 
@@ -28,24 +119,31 @@ Completed (v1.0)
 
 Completed Research
 
-H1 - Relative Strength
+H1 - Individual Factor Predictive Power
 
 Status:
-Rejected
+Completed
 
-Reason:
-No statistically meaningful predictive edge.
+Conclusion:
+
+Individual factors alone do not consistently produce sufficient predictive edge.
+
+Several factors become useful only when combined with others.
 
 ---
 
-H4 - Relative Volume (RVOL)
+H4 - Relative Volume
 
 Status:
-Rejected
+Rejected (Standalone)
 
-Reason:
-No statistically meaningful predictive edge.
+Future Research
 
+Investigate RVOL as:
+
+• Trade Filter
+• Market Regime Filter
+• Liquidity Filter
 ---
 
 Active Research
@@ -60,10 +158,15 @@ H5 - Gap %
 
 H6 - Absolute Strength Filter
 
-H7 - Multi-Factor Research
+H7 - Multi-Factor Model Constructionch
 
-H8 - Candidate Selection
+H8 - Threshold Optimization
+Status:
+In Progress
 
+H9 - Model Validation
+Status:
+Planned
 ---
 
 Research Engine
@@ -84,6 +187,14 @@ Current Features
 - Average Loss
 - Expectancy
 
+• Automatic factor combinations
+• Composite ranking engine
+• Threshold optimization
+• Sequential filter optimization
+• Weighted multi-dataset scoring
+• Markdown report generation
+• CSV report generation
+
 ---
 
 Project Philosophy
@@ -93,6 +204,8 @@ Every hypothesis must be validated using evidence.
 Rejected hypotheses are considered successful research outcomes.
 
 No trading rule becomes permanent without statistical validation.
+
+Optimization is permitted only after a statistical edge has been demonstrated.
 
 ---
 
@@ -118,8 +231,40 @@ Hypothesis Folder
 
 Next Research Priority
 
-Gap Percentage
+1. Validate Current Champion Model
 
-Followed by
+• Factor contribution
+• Rank sensitivity
+• Timeframe sensitivity
+• Walk-forward stability
 
-Multi-factor combinations.
+2. Market Regime Detection
+
+3. Relative Volume Reassessment
+
+4. Candidate Selection Engine
+
+5. Strategy Construction
+-----
+
+Research Pipeline
+
+01 Universe Construction
+
+02 Dataset Creation
+
+03 Individual Factor Analysis
+
+04 Multi-Factor Combination Search
+
+05 Parameter Optimization
+
+06 Threshold Optimization
+
+07 Model Validation
+
+08 Strategy Construction
+
+09 Paper Trading
+
+10 Live Deployment
