@@ -58,9 +58,10 @@ OUTPUT_FILE = (
 #==========================================================
 
 results = []
+all_results = []
+
 locked_filters = []
 filter_history = []
-
 #==========================================================
 # Cache Datasets
 #==========================================================
@@ -212,28 +213,71 @@ for round_number in range(MAX_FILTERS):
                         * weight
                     )
         
-                results.append({
+                operator = ">" if ">" in filter_text else "<"
+
+                threshold_value = float(
+                    filter_text.split(operator)[1]
+                )
+                
+                row = {
+                
+                    "Round": round_number + 1,
+                
+                    "Combination": " + ".join(COMBINATION),
+                
+                    "Timeframe": TIMEFRAME,
+                
+                    "Best Rank": BEST_RANK,
+                
+                    "Locked Filters": " AND ".join(locked_filters),
+                
                     "Factor": FACTOR_TO_OPTIMIZE,
+                
+                    "Operator": operator,
+                
+                    "Threshold Value": threshold_value,
+                
                     "Filter": filter_text,
-    
+                
                     "60": round(dataset_results[60]["Expectancy"], 3),
                     "120": round(dataset_results[120]["Expectancy"], 3),
                     "180": round(dataset_results[180]["Expectancy"], 3),
                     "365": round(dataset_results[365]["Expectancy"], 3),
                     "730": round(dataset_results[730]["Expectancy"], 3),
-    
-                    "Baseline": round(BASELINE_SCORE,3),
-                    "Score": round(score,3),
+                
+                    "Baseline": round(BASELINE_SCORE, 3),
+                
+                    "Score": round(score, 3),
+                
                     "Improvement %": round(
-                        ((score - BASELINE_SCORE) / BASELINE_SCORE) * 100,
+                        (
+                            (score - BASELINE_SCORE)
+                            / BASELINE_SCORE
+                        ) * 100,
                         2
                     ),
-                    
+                
                     "Trades": dataset_results[60]["Trades"],
-                    "Coverage": round(dataset_results[60]["Coverage"], 2),
-                    "Win Rate": round(dataset_results[60]["WinRate"], 2),
-                    "Avg Return": round(dataset_results[60]["AvgReturn"], 3),
-                })
+                
+                    "Coverage": round(
+                        dataset_results[60]["Coverage"],
+                        2
+                    ),
+                
+                    "Win Rate": round(
+                        dataset_results[60]["WinRate"],
+                        2
+                    ),
+                
+                    "Avg Return": round(
+                        dataset_results[60]["AvgReturn"],
+                        3
+                    ),
+                }
+                
+                results.append(row)
+                
+                all_results.append(row.copy())
 #==========================================================
 
 #RESULTS
@@ -255,14 +299,7 @@ for round_number in range(MAX_FILTERS):
     )
     .reset_index(drop=True)
     )
-    
-    leaderboard.insert(
-    0,
-    "Combination",
-    " + ".join(COMBINATION)
-    )
-    leaderboard["Timeframe"] = TIMEFRAME
-    leaderboard["Best Rank"] = BEST_RANK
+  
     leaderboard["Rank"] = leaderboard.index + 1
     
     if MAX_FILTERS > 1:
@@ -272,9 +309,7 @@ for round_number in range(MAX_FILTERS):
         locked_filters.append(best_filter)
         
         filter_history.append(best_filter)
-        leaderboard["Locked Filters"] = [
-        " AND ".join(locked_filters)
-        ] * len(leaderboard)
+        
         BASELINE_SCORE = leaderboard.iloc[0]["Score"]
     
         print()
@@ -289,8 +324,24 @@ print("=" * 80)
 print(leaderboard.to_string(index=False))
 
 leaderboard.to_csv(
-OUTPUT_FILE,
-index=False
+    OUTPUT_FILE,
+    index=False
+)
+
+#==========================================================
+# Save Complete Results
+#==========================================================
+
+ALL_OUTPUT_FILE = (
+    OUTPUT_FILE.replace(
+        ".csv",
+        "_all.csv"
+    )
+)
+
+pd.DataFrame(all_results).to_csv(
+    ALL_OUTPUT_FILE,
+    index=False
 )
 
 #==========================================================

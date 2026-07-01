@@ -1,0 +1,77 @@
+Round,Combination,Timeframe,Best Rank,Locked Filters,Factor,Operator,Threshold Value,Filter,60,120,180,365,730,Baseline,Score,Improvement %,Trades,Coverage,Win Rate,Avg Return
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,ORB_Range,>,2.05,ORB_Range>2.05,0.141,0.119,0.075,0.057,0.019,0.073,0.109,48.87,35,3.26,54.29,0.141
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,ORB_Range,>,4.6,ORB_Range>4.6,0.126,0.126,0.062,0.048,0.024,0.073,0.101,38.66,33,3.21,51.52,0.126
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,ORB_Range,>,6.9,ORB_Range>6.9,0.107,0.106,0.038,0.057,0.033,0.073,0.085,16.72,28,2.85,50.0,0.107
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,ORB_Range,>,8.6,ORB_Range>8.6,0.107,0.092,0.033,0.05,0.026,0.073,0.079,8.04,27,2.92,48.15,0.107
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,ORB_Range,>,10.1,ORB_Range>10.1,0.094,0.086,0.043,0.061,0.034,0.073,0.077,4.96,23,2.63,43.48,0.094
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,ORB_Range,>,11.7,ORB_Range>11.7,0.039,-0.015,-0.028,0.013,0.014,0.073,0.005,-92.65,20,2.46,40.0,0.039
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,ORB_Range,>,13.2,ORB_Range>13.2,0.039,-0.015,-0.032,0.018,0.002,0.073,0.005,-92.61,20,2.62,40.0,0.039
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,ORB_Range,<,14.8,ORB_Range<14.8,0.177,0.114,0.107,0.062,0.043,0.073,0.127,73.84,24,5.57,58.33,0.177
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,ORB_Range,<,16.7075,ORB_Range<16.7075,0.166,0.068,0.048,0.024,0.023,0.073,0.092,25.54,25,4.94,56.0,0.166
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,ORB_Range,<,18.9,ORB_Range<18.9,0.149,0.087,0.062,0.043,0.03,0.073,0.097,33.39,29,4.98,58.62,0.149
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,ORB_Range,<,21.4,ORB_Range<21.4,0.149,0.112,0.078,0.047,0.016,0.073,0.108,48.38,29,4.54,58.62,0.149
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,ORB_Range,<,24.75,ORB_Range<24.75,0.142,0.148,0.112,0.063,0.028,0.073,0.126,72.21,31,4.45,58.06,0.142
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,ORB_Range,<,29.1275,ORB_Range<29.1275,0.142,0.081,0.083,0.049,0.02,0.073,0.098,34.08,31,4.16,58.06,0.142
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,ORB_Range,<,34.7,ORB_Range<34.7,0.142,0.083,0.082,0.049,0.02,0.073,0.098,34.41,33,4.1,57.58,0.142
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,ORB_Range,<,41.5,ORB_Range<41.5,0.117,0.073,0.074,0.035,0.016,0.073,0.083,13.46,37,4.25,54.05,0.117
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,ORB_Range,<,50.3,ORB_Range<50.3,0.117,0.073,0.074,0.043,0.017,0.073,0.084,15.07,37,4.04,54.05,0.117
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,ORB_Range,<,61.6,ORB_Range<61.6,0.117,0.073,0.075,0.048,0.02,0.073,0.085,16.25,37,3.83,54.05,0.117
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,ORB_Range,<,79.5,ORB_Range<79.5,0.102,0.066,0.053,0.047,0.025,0.073,0.073,0.32,38,3.69,52.63,0.102
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,ORB_Range,<,128.4825,ORB_Range<128.4825,0.102,0.066,0.053,0.049,0.021,0.073,0.074,0.79,38,3.53,52.63,0.102
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,Previous_Day_Return,>,-0.4617,Previous_Day_Return>-0.4617,0.083,0.059,0.041,0.041,0.014,0.073,0.061,-16.25,36,3.28,50.0,0.083
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,Previous_Day_Return,>,-0.3387,Previous_Day_Return>-0.3387,0.066,0.049,0.029,0.047,0.018,0.073,0.05,-30.83,30,2.85,50.0,0.066
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,Previous_Day_Return,>,-0.2697,Previous_Day_Return>-0.2697,0.09,0.072,0.038,0.023,0.009,0.073,0.064,-12.1,28,2.8,53.57,0.09
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,Previous_Day_Return,>,-0.2118,Previous_Day_Return>-0.2118,0.093,0.008,0.009,0.009,-0.005,0.073,0.038,-47.62,25,2.62,52.0,0.093
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,Previous_Day_Return,>,-0.1657,Previous_Day_Return>-0.1657,0.081,0.006,-0.017,-0.011,-0.005,0.073,0.025,-65.58,23,2.56,52.17,0.081
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,Previous_Day_Return,>,-0.1279,Previous_Day_Return>-0.1279,0.114,0.011,-0.006,-0.02,-0.005,0.073,0.039,-46.39,20,2.32,55.0,0.114
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,Previous_Day_Return,<,-0.0941,Previous_Day_Return<-0.0941,0.171,0.159,0.11,0.074,0.039,0.073,0.141,92.78,21,6.27,57.14,0.171
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,Previous_Day_Return,<,-0.0636,Previous_Day_Return<-0.0636,0.178,0.153,0.124,0.078,0.035,0.073,0.145,98.4,23,6.05,56.52,0.178
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,Previous_Day_Return,<,-0.0327,Previous_Day_Return<-0.0327,0.202,0.156,0.093,0.055,0.029,0.073,0.144,97.77,25,5.76,60.0,0.202
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,Previous_Day_Return,<,-0.0058,Previous_Day_Return<-0.0058,0.157,0.109,0.056,0.032,0.021,0.073,0.104,42.1,28,5.82,57.14,0.157
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,Previous_Day_Return,<,0.0166,Previous_Day_Return<0.0166,0.136,0.109,0.062,0.035,0.016,0.073,0.098,34.0,29,5.41,55.17,0.136
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,Previous_Day_Return,<,0.0426,Previous_Day_Return<0.0426,0.104,0.097,0.057,0.039,0.016,0.073,0.083,13.33,30,5.03,53.33,0.104
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,Previous_Day_Return,<,0.0746,Previous_Day_Return<0.0746,0.071,0.08,0.048,0.041,0.021,0.073,0.064,-12.0,34,5.26,52.94,0.071
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,Previous_Day_Return,<,0.1054,Previous_Day_Return<0.1054,0.071,0.055,0.033,0.031,0.007,0.073,0.053,-27.98,34,4.78,52.94,0.071
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,Previous_Day_Return,<,0.14,Previous_Day_Return<0.14,0.071,0.052,0.031,0.029,0.007,0.073,0.051,-30.29,34,4.4,52.94,0.071
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,Previous_Day_Return,<,0.185,Previous_Day_Return<0.185,0.071,0.055,0.034,0.03,0.012,0.073,0.053,-27.91,34,4.05,52.94,0.071
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,Previous_Day_Return,<,0.2425,Previous_Day_Return<0.2425,0.101,0.066,0.053,0.041,0.022,0.073,0.072,-1.77,36,3.99,52.78,0.101
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,Previous_Day_Return,<,0.3158,Previous_Day_Return<0.3158,0.102,0.063,0.051,0.041,0.025,0.073,0.071,-2.68,38,3.85,52.63,0.102
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,Previous_Day_Return,<,0.458,Previous_Day_Return<0.458,0.102,0.066,0.053,0.043,0.023,0.073,0.073,-0.59,38,3.59,52.63,0.102
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,RS_60,>,-1.7851,RS_60>-1.7851,0.122,0.099,0.069,0.042,-0.001,0.073,0.093,26.98,36,3.36,55.56,0.122
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,RS_60,>,-1.1969,RS_60>-1.1969,0.153,0.078,0.056,0.03,-0.017,0.073,0.092,26.51,31,3.09,58.06,0.153
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,RS_60,>,-0.9006,RS_60>-0.9006,0.133,0.053,0.056,0.029,0.017,0.073,0.078,7.13,28,2.97,57.14,0.133
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,RS_60,>,-0.6961,RS_60>-0.6961,0.15,0.054,0.052,0.023,0.022,0.073,0.083,13.13,25,2.81,60.0,0.15
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,RS_60,>,-0.5438,RS_60>-0.5438,0.15,0.095,0.117,0.055,0.038,0.073,0.113,54.13,24,2.88,58.33,0.15
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,RS_60,>,-0.4051,RS_60>-0.4051,0.203,0.164,0.164,0.069,0.048,0.073,0.163,123.66,21,2.67,61.9,0.203
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,RS_60,<,-0.1626,RS_60<-0.1626,0.024,-0.026,-0.027,-0.003,-0.018,0.073,-0.006,-107.68,22,4.74,45.45,0.024
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,RS_60,<,-0.0566,RS_60<-0.0566,0.062,-0.004,0.002,0.024,-0.001,0.073,0.024,-66.84,23,4.43,47.83,0.062
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,RS_60,<,0.041,RS_60<0.041,0.106,0.023,0.02,0.045,0.011,0.073,0.054,-25.47,25,4.35,52.0,0.106
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,RS_60,<,0.1437,RS_60<0.1437,0.131,0.017,0.027,0.039,0.01,0.073,0.062,-14.68,27,4.33,55.56,0.131
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,RS_60,<,0.2436,RS_60<0.2436,0.098,-0.006,0.007,0.023,0.001,0.073,0.037,-48.65,29,4.27,51.72,0.098
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,RS_60,<,0.3531,RS_60<0.3531,0.084,0.016,0.021,0.023,0.003,0.073,0.042,-42.22,31,4.16,51.61,0.084
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,RS_60,<,0.4693,RS_60<0.4693,0.065,0.015,0.025,0.024,0.011,0.073,0.036,-50.53,34,4.22,50.0,0.065
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,RS_60,<,0.5933,RS_60<0.5933,0.097,0.027,0.032,0.028,0.01,0.073,0.053,-27.92,37,4.32,51.35,0.097
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,RS_60,<,0.7473,RS_60<0.7473,0.097,0.03,0.032,0.03,0.017,0.073,0.054,-26.11,37,4.0,51.35,0.097
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,RS_60,<,0.9512,RS_60<0.9512,0.097,0.022,0.027,0.028,0.019,0.073,0.05,-30.83,37,3.79,51.35,0.097
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,RS_60,<,1.2435,RS_60<1.2435,0.102,0.026,0.028,0.031,0.024,0.073,0.054,-26.4,38,3.66,52.63,0.102
+1,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,,RS_60,<,1.8469,RS_60<1.8469,0.102,0.026,0.028,0.031,0.026,0.073,0.054,-26.4,38,3.51,52.63,0.102
+2,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,RS_60>-0.4051,ORB_Range,>,2.05,ORB_Range>2.05,0.197,0.219,0.177,0.083,0.04,0.163,0.182,11.89,20,2.71,60.0,0.197
+2,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,RS_60>-0.4051,ORB_Range,<,41.5,ORB_Range<41.5,0.203,0.164,0.164,0.069,0.046,0.163,0.163,0.13,21,3.43,61.9,0.203
+2,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,RS_60>-0.4051,ORB_Range,<,50.3,ORB_Range<50.3,0.203,0.164,0.164,0.075,0.049,0.163,0.164,0.68,21,3.27,61.9,0.203
+2,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,RS_60>-0.4051,ORB_Range,<,61.6,ORB_Range<61.6,0.203,0.164,0.164,0.075,0.049,0.163,0.164,0.68,21,3.11,61.9,0.203
+2,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,RS_60>-0.4051,ORB_Range,<,79.5,ORB_Range<79.5,0.203,0.164,0.164,0.075,0.051,0.163,0.164,0.68,21,2.92,61.9,0.203
+2,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,RS_60>-0.4051,ORB_Range,<,128.4825,ORB_Range<128.4825,0.203,0.164,0.164,0.075,0.051,0.163,0.164,0.68,21,2.79,61.9,0.203
+2,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,RS_60>-0.4051,Previous_Day_Return,<,0.0746,Previous_Day_Return<0.0746,0.197,0.212,0.176,0.073,0.053,0.163,0.179,9.59,20,4.66,60.0,0.197
+2,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,RS_60>-0.4051,Previous_Day_Return,<,0.1054,Previous_Day_Return<0.1054,0.197,0.162,0.143,0.06,0.033,0.163,0.155,-4.87,20,4.21,60.0,0.197
+2,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,RS_60>-0.4051,Previous_Day_Return,<,0.14,Previous_Day_Return<0.14,0.197,0.162,0.143,0.056,0.035,0.163,0.154,-5.23,20,3.81,60.0,0.197
+2,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,RS_60>-0.4051,Previous_Day_Return,<,0.185,Previous_Day_Return<0.185,0.197,0.166,0.146,0.058,0.038,0.163,0.156,-4.1,20,3.5,60.0,0.197
+2,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,RS_60>-0.4051,Previous_Day_Return,<,0.2425,Previous_Day_Return<0.2425,0.197,0.166,0.165,0.068,0.043,0.163,0.162,-0.85,20,3.26,60.0,0.197
+2,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,RS_60>-0.4051,Previous_Day_Return,<,0.3158,Previous_Day_Return<0.3158,0.203,0.16,0.161,0.068,0.047,0.163,0.162,-0.89,21,3.1,61.9,0.203
+2,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,RS_60>-0.4051,Previous_Day_Return,<,0.458,Previous_Day_Return<0.458,0.203,0.164,0.164,0.069,0.048,0.163,0.163,0.17,21,2.88,61.9,0.203
+3,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,RS_60>-0.4051 AND ORB_Range>2.05,Previous_Day_Return,<,0.0746,Previous_Day_Return<0.0746,0.197,0.274,0.21,0.094,0.053,0.182,0.207,13.81,20,4.93,60.0,0.197
+3,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,RS_60>-0.4051 AND ORB_Range>2.05,Previous_Day_Return,<,0.1054,Previous_Day_Return<0.1054,0.197,0.214,0.173,0.079,0.031,0.182,0.179,-1.4,20,4.44,60.0,0.197
+3,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,RS_60>-0.4051 AND ORB_Range>2.05,Previous_Day_Return,<,0.14,Previous_Day_Return<0.14,0.197,0.214,0.173,0.079,0.032,0.182,0.179,-1.4,20,4.02,60.0,0.197
+3,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,RS_60>-0.4051 AND ORB_Range>2.05,Previous_Day_Return,<,0.185,Previous_Day_Return<0.185,0.197,0.217,0.175,0.081,0.035,0.182,0.181,-0.6,20,3.7,60.0,0.197
+3,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,RS_60>-0.4051 AND ORB_Range>2.05,Previous_Day_Return,<,0.2425,Previous_Day_Return<0.2425,0.197,0.217,0.175,0.081,0.035,0.182,0.181,-0.6,20,3.45,60.0,0.197
+3,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,RS_60>-0.4051 AND ORB_Range>2.05,Previous_Day_Return,<,0.3158,Previous_Day_Return<0.3158,0.197,0.217,0.175,0.081,0.039,0.182,0.181,-0.6,20,3.13,60.0,0.197
+3,ORB_Range + Previous_Day_Return + RS_60,60 Min,25,RS_60>-0.4051 AND ORB_Range>2.05,Previous_Day_Return,<,0.458,Previous_Day_Return<0.458,0.197,0.219,0.177,0.083,0.04,0.182,0.182,0.21,20,2.93,60.0,0.197

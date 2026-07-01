@@ -111,14 +111,50 @@ for number in range(1, TOP_VALIDATIONS + 1):
     validation_score = weighted_score(winners)
 
     drop = (
-        (validation_score - train_score)
+    (validation_score - train_score)
+    / train_score
+    * 100
+    if train_score != 0
+    else 0
+    )
+    
+    retention = (
+        validation_score
         / train_score
         * 100
         if train_score != 0
         else 0
     )
-
-    verdict = "PASS" if validation_score >= train_score * 0.80 else "FAIL"
+    
+    if retention >= 100:
+    
+        confidence = "Outstanding"
+    
+    elif retention >= 95:
+    
+        confidence = "Excellent"
+    
+    elif retention >= 85:
+    
+        confidence = "Strong"
+    
+    elif retention >= 70:
+    
+        confidence = "Acceptable"
+    
+    elif retention >= 50:
+    
+        confidence = "Weak"
+    
+    else:
+    
+        confidence = "Reject"
+    
+    verdict = (
+        "PASS"
+        if retention >= 80
+        else "FAIL"
+    )
 
     results.append({
         "Combination #": number,
@@ -126,7 +162,9 @@ for number in range(1, TOP_VALIDATIONS + 1):
         "Locked Filters": " AND ".join(locked_filters),
         "Train Score": round(train_score, 3),
         "Validation Score": round(validation_score, 3),
+        "Retention %": round(retention, 2),
         "Change %": round(drop, 2),
+        "Confidence": confidence,
         "Verdict": verdict,
         "60": round(winners[60]["Expectancy"], 3),
         "120": round(winners[120]["Expectancy"], 3),
@@ -163,6 +201,9 @@ with open(OUTPUT_MD, "w") as f:
 
     f.write("# NoorQuant Validation\n\n")
     f.write("## Validation Window\n\n")
+    f.write(
+    "- Validation Rule : **Retention ≥ 80% = PASS**\n\n"
+    ) 
     f.write(f"- Train : **{TRAIN_START} → {TRAIN_END}**\n")
     f.write(f"- Test : **{TEST_START} → {TEST_END}**\n\n")
     f.write("---\n\n")
